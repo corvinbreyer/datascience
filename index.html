@@ -14,7 +14,7 @@
   </nav>
   <main>
     <h1>HTML Example Document</h1>
-    <canvas id="myChart" width="600" height="300"></canvas>
+    <canvas id="myChart" width="400" height="200"></canvas>
 
     <h2>Danfo Data Processing Example</h2>
     <p>Dies ist ein Beispiel für eine tabellarische Ausgabe.</p>
@@ -272,7 +272,8 @@
     s = new dfd.Series([1, 3, 5, undefined, 6, 8]);
     s.print();
     document.getElementById('danfoTest').textContent = s;
-    document.getElementById('danfoTestJson').textContent = JSON.stringify(dfd.toJSON(s, { format: 'row' })[0]);
+    let valArray = dfd.toJSON(s, { format: 'row' })[0];
+    document.getElementById('danfoTestJson').textContent = JSON.stringify(valArray);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -285,7 +286,7 @@
       labels: ['January', 'February', 'March', 'April', 'May'],
       datasets: [{
         label: 'Sales',
-        data: [12, 19, 3, 5, 2],
+        data: valArray,
         borderWidth: 2,
         tension: 0.3
       }]
