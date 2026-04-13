@@ -18,6 +18,10 @@ td {
   text-align: left;
 }
 
+h2 {
+  color: #5f3dc4;
+}
+
 .layoutTable,
 .layoutTable th,
 .layoutTable tr,
