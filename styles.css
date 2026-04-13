@@ -14,45 +14,6 @@ main {
   margin: 0 auto;
 }
 
-table {
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  width: 100%;
-  max-width: 700px;
-}
-
-th,
-td {
-  border: 1px solid #999;
-  padding: 0.5rem;
-  text-align: left;
-}
-
 h2 {
   color: #5f3dc4;
-}
-
-.layoutTable,
-.layoutTable th,
-.layoutTable tr,
-.layoutTable td {
-  border: none;
-}
-
-.fake-list p::before {
-  content: "- ";
-}
-
-.example-section {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-#csstext::before {
-  content: 'This text is mostly added ';
-}
-
-#csstext::after {
-  content: ' CSS pseudo elements';
 }
