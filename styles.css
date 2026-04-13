@@ -2,14 +2,16 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   margin: 2rem;
-  padding: 20px;
-  background-color: #ddd;
+  padding: 15px;
+  background-color: #eee;
 }
 
 main {
   max-width: 750px;
   background-color: #fff;
   border-radius: 8px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 table {
