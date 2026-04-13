@@ -14,6 +14,7 @@
   </nav>
   <main>
     <h1>HTML Example Document</h1>
+    <canvas id="myChart" width="600" height="300"></canvas>
 
     <div class="example-section">
       <h2>Correct Heading Order</h2>
@@ -260,5 +261,30 @@
       <p>Third fake list item 2</p>
     </div>
   </main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+
+  const myChart = new Chart(ctx, {
+    type: 'line', // try 'bar', 'pie', etc.
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May'],
+      datasets: [{
+        label: 'Sales',
+        data: [12, 19, 3, 5, 2],
+        borderWidth: 2,
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 </body>
 </html>
