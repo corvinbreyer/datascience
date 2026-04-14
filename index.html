@@ -17,6 +17,8 @@
     <pre id="danfoTestJson"></pre>
 
     <canvas id="myChart" width="400" height="200"></canvas>
+
+    <div id="papadanfoTable"></div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/danfojs@1.2.0/lib/bundle.min.js"></script>
@@ -50,6 +52,7 @@
       complete: function(results) {
         const df = new dfd.DataFrame(results.data);
         df.print();
+        df.plt('papadanfoTable').table();
       }
     });
   </script>
