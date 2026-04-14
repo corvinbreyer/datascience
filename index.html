@@ -29,6 +29,18 @@
         console.log(results);
       }
     });
+
+    /*papa and danfo example*/
+    Papa.parse("example.csv", {
+      header: true,
+      skipEmptyLines: true,
+      dynamicTyping: true,
+      transformHeader: h => h.trim(),
+      complete: function(results) {
+        const df = new dfd.DataFrame(results.data);
+        df.print();
+      }
+    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/danfojs@1.2.0/lib/bundle.min.js"></script>
