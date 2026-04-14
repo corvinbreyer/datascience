@@ -44,6 +44,8 @@
       }
     });
 
+    let tempAccess = 'unset';
+
     /*papa and danfo example*/
     Papa.parse("example.csv", {
       header: true,
@@ -52,6 +54,7 @@
       transformHeader: h => h.trim(),
       complete: function(results) {
         const df = new dfd.DataFrame(results.data);
+        tempAccess = df;
         df.print();
         /*df.plot('papadanfoTable').table();*/
         renderDataFrame(df, "papadanfoTable");
