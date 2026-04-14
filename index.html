@@ -19,7 +19,18 @@
     <canvas id="myChart" width="400" height="200"></canvas>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/danfojs@1.2.0/lib/bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+      s = new dfd.Series([1, 3, 5, undefined, 6, 8]);
+      s.print();
+      document.getElementById('danfoTest').textContent = s;
+      let valArray = dfd.toJSON(s, { format: 'row' })[0];
+      document.getElementById('danfoTestJson').textContent = JSON.stringify(valArray);
+  </script>
+
   <script>
     /*this works great, data from https://support.staffbase.com/hc/en-us/articles/360007108391-CSV-File-Examples*/
     Papa.parse("example.csv", {
@@ -43,16 +54,6 @@
     });
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/danfojs@1.2.0/lib/bundle.min.js"></script>
-  <script>
-      s = new dfd.Series([1, 3, 5, undefined, 6, 8]);
-      s.print();
-      document.getElementById('danfoTest').textContent = s;
-      let valArray = dfd.toJSON(s, { format: 'row' })[0];
-      document.getElementById('danfoTestJson').textContent = JSON.stringify(valArray);
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     const ctx = document.getElementById('myChart').getContext('2d');
 
