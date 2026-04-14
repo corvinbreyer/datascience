@@ -36,7 +36,7 @@
 
   <script>
     /*this works great, data from https://support.staffbase.com/hc/en-us/articles/360007108391-CSV-File-Examples*/
-    Papa.parse("example.csv", {
+    Papa.parse("rawData/example.csv", {
       download: true,
       complete: function(results) {
         alert('done');
@@ -47,7 +47,7 @@
     let tempAccess = 'unset';
 
     /*papa and danfo example*/
-    Papa.parse("example.csv", {
+    Papa.parse("rawData/example.csv", {
       header: true,
       skipEmptyLines: true,
       dynamicTyping: true,
