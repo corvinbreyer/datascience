@@ -23,7 +23,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/danfojs@1.2.0/lib/bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/plotly@1.0.6/index.min.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/plotly@1.0.6/index.min.js"></script>-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
@@ -53,9 +53,27 @@
       complete: function(results) {
         const df = new dfd.DataFrame(results.data);
         df.print();
-        df.plot('papadanfoTable').table();
+        /*df.plot('papadanfoTable').table();*/
+        renderDataFrame(df, "papadanfoTable");
       }
     });
+
+    function renderDataFrame(df, targetId) {
+      const rows = dfd.toJSON(df);   // array of row objects
+      const columns = df.columns;
+
+      let html = "<table><thead><tr>";
+      html += columns.map(col => `<th>${col}</th>`).join("");
+      html += "</tr></thead><tbody>";
+
+      html += rows.map(row => {
+        return "<tr>" + columns.map(col => `<td>${row[col] ?? ""}</td>`).join("") + "</tr>";
+      }).join("");
+
+      html += "</tbody></table>";
+
+      document.getElementById(targetId).innerHTML = html;
+    }
   </script>
 
   <script>
