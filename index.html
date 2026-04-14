@@ -21,7 +21,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
   <script>
-    
+    Papa.parse("example.csv", {
+      download: true,
+      complete: function(results) {
+        alert('done');
+        console.log(results);
+      }
+    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/danfojs@1.2.0/lib/bundle.min.js"></script>
