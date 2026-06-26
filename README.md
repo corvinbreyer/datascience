@@ -10,7 +10,7 @@ Ziel des Projekts war es nicht, politische Entwicklungen abschließend zu erklä
 # Anwendung lokal starten
 Aufgrund von fetch()-Anweisungen für die CSV-Daten muss diese Anwendung von einem Server gestartet werden. Auf Windows und mit installiertem "python" kann hierfür die "__start_server.bat"-Datei zum Starten verwendet werden. Falls dies nicht funktioniert oder falls eine andere Vorgehensweise benötigt wird, <a href="https://developer.mozilla.org/de/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server" target="_blank">gibt es hier weitere Ansätze (developer.mozilla.org)</a>
 
-# Weitere Daten
+# Weitere Informationen zum Projekt
 - HTML/CSS/JS
 - D3.js
 - Gehostet via GitHub Pages
@@ -18,4 +18,4 @@ Aufgrund von fetch()-Anweisungen für die CSV-Daten muss diese Anwendung von ein
 - Erstellt von Studenten, Juni 2026
 
 This website is a university project created for educational purposes only. It is not a commercial service and is not intended for production use. The application does not provide user accounts, payment functionality, advertising, analytics, or user-submitted content.
-Contact: taylor.paddley@gmail.com
+Contact: averinprojects@gmail.com
